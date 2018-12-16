@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "814f6d9e-b755-4bef-94b9-99cab0f19d48",
+		"name": "Interact Intranet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Games",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:65492/api/games?Content-Type=application/json&Accept=application/json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "65492",
+					"path": [
+						"api",
+						"games"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Accept",
+							"value": "application/json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Game",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:65492/api/games/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "65492",
+					"path": [
+						"api",
+						"games",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Game (non-existing)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:65492/api/games/999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "65492",
+					"path": [
+						"api",
+						"games",
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Game",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Platform\": \"PSVR\",\n\t\"Title\": \"Resident Evil 7\",\n\t\"Rating\": \"7\",\n}"
+				},
+				"url": {
+					"raw": "http://localhost:65492/api/games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "65492",
+					"path": [
+						"api",
+						"games"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
