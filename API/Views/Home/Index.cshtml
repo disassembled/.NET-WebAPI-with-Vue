@@ -1,0 +1,21 @@
+﻿<div id="game-view">
+    <table class="table table-striped table-bordered table-responsive">
+        <caption>My Video Game Collection</caption>
+        <thead>
+            <tr>
+                <th class="game-id">Id</th>
+                <th>Platform</th>
+                <th>Title</th>
+                <th class="game-rating">Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="game in games">
+                <td class="game-id">{{game.Id}}</td>
+                <td>{{game.Platform}}</td>
+                <td>{{game.Title}}</td>
+                <td class="game-rating">{{game.Rating}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
